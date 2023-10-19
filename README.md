@@ -33,17 +33,13 @@ $sources = [
 2. Create an instance of the RequestStatusVerifier class, passing the Source objects.
 
 ```shell
-use YourNamespace\WebsiteChecker;
-use YourNamespace\Result;
+use KontaktDev\RequestStatusVerifier;
+use KontaktDev\Result;
 
 // Without Result injection
-$websiteChecker = new WebsiteChecker($websites);
+$requestStatusVerifier = new RequestStatusVerifier($sources);
 
-// With Result injection
-$result = new Result();
-$websiteChecker = new WebsiteChecker($websites, $result);
-
-$results = $websiteChecker->checkWebsites();
+$results = $requestStatusVerifier->checkSources();
 ```
 
 3. The results can be analyzed using the Result object, which separates available and unavailable sources.
