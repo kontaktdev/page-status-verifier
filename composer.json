@@ -1,6 +1,6 @@
 {
-  "name": "kontaktdev/page-status-verifier",
-  "description": "Website status checker component for PHP.",
+  "name": "kontaktdev/request-status-verifier",
+  "description": "URL status checker component for PHP.",
   "type": "library",
   "license": "MIT",
   "authors": [
