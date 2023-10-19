@@ -1,0 +1,13 @@
+# macOS system files
+.DS_Store
+
+# Logs and crash reports
+*.log
+*.crash
+
+# Composer Vendor Folder
+composer.lock
+/vendor/
+
+# PHP Unit
+.phpunit.result.cache
