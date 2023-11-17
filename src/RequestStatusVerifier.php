@@ -1,17 +1,28 @@
 <?php
-namespace KontaktDev;
+namespace Kontakt\RequestStatusVerifier;
 
+/**
+ * Class RequestStatusVerifier
+ * @package Kontakt\RequestStatusVerifier
+ */
 class RequestStatusVerifier
 {
-    private $sources;
-    private $result;
+    private array $sources;
+    private Result $result;
 
+    /**
+     * RequestStatusVerifier constructor.
+     * @param array $sources
+     */
     public function __construct(array $sources) {
         $this->sources = $sources;
         $this->result = new Result();
     }
 
-    public function checkSources() {
+    /**
+     * @return Result
+     */
+    public function checkSources(): Result {
         foreach ($this->sources as $source) {
             $url = $source->getUrl();
             $timeout = $source->getCustomTimeout();
@@ -28,7 +39,13 @@ class RequestStatusVerifier
         return $this->result;
     }
 
-    private function is200(string $url, int $timeout, string $httpMethod) {
+    /**
+     * @param string $url
+     * @param int $timeout
+     * @param string $httpMethod
+     * @return bool
+     */
+    private function is200(string $url, int $timeout, string $httpMethod): bool {
         $ch = curl_init($url);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
         curl_setopt($ch, CURLOPT_TIMEOUT, $timeout);

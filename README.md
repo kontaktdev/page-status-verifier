@@ -10,10 +10,10 @@ Request Status Verifier is a PHP utility that allows you to check the availabili
 
 ## Installation
 
-You can install the Website Checker utility using Composer. Run the following command in your project directory:
+Clone the repository. You can install the Request Status Verifier with Composer:
 
 ```shell
-composer require kontaktdev/request-status-verifier
+composer install
 ```
 
 ## Usage
@@ -21,8 +21,6 @@ composer require kontaktdev/request-status-verifier
 1. Create Source objects, specifying the URL, custom timeout, and HTTP method for each URL source you want to check.
 
 ```shell
-use KontaktDev;
-
 $sources = [
     new Source('https://example.com', 5, 'POST'),
     new Source('https://example.org', 15, 'GET'),
@@ -30,19 +28,14 @@ $sources = [
 ];
 ```
 
-2. Create an instance of the RequestStatusVerifier class, passing the Source objects.
+2. Create an instance of the RequestStatusVerifier class, passing the Source objects and check the availability.
 
 ```shell
-use KontaktDev\RequestStatusVerifier;
-use KontaktDev\Result;
-
-// Without Result injection
 $requestStatusVerifier = new RequestStatusVerifier($sources);
-
 $results = $requestStatusVerifier->checkSources();
 ```
 
-3. The results can be analyzed using the Result object, which separates available and unavailable sources.
+3. The results can be checked as following:
 
 ```shell
 $available = $results->getAvailable();

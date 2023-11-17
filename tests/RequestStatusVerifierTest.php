@@ -1,9 +1,9 @@
 <?php
 
 use PHPUnit\Framework\TestCase;
-use KontaktDev\Source;
-use KontaktDev\RequestStatusVerifier;
-use KontaktDev\Result;
+use Kontakt\RequestStatusVerifier\Source;
+use Kontakt\RequestStatusVerifier\RequestStatusVerifier;
+use Kontakt\RequestStatusVerifier\Result;
 
 class RequestStatusVerifierTest extends TestCase {
 

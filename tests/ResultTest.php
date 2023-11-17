@@ -1,7 +1,7 @@
 <?php
 
 use PHPUnit\Framework\TestCase;
-use KontaktDev\Result;
+use Kontakt\RequestStatusVerifier\Result;
 
 class ResultTest extends TestCase {
     public function testAddingAvailableAndUnavailable() {

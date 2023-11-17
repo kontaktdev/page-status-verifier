@@ -1,16 +1,23 @@
 <?php
-namespace KontaktDev;
+namespace Kontakt\RequestStatusVerifier;
 
 /**
  * Class Source
- * @package KontaktDev
+ * @package Kontakt\RequestStatusVerifier
  */
 class Source
 {
-    private $url;
-    private $customTimeout;
-    private $httpMethod;
+    private string $url;
+    private int $customTimeout;
+    private string $httpMethod;
 
+    /**
+     * Source constructor.
+     *
+     * @param string $url
+     * @param int $customTimeout
+     * @param string $httpMethod
+     */
     public function __construct(string $url, int $customTimeout = 10, string $httpMethod = 'GET') {
         $this->url = $url;
         $this->customTimeout = $customTimeout;

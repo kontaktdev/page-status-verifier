@@ -1,7 +1,7 @@
 <?php
 
 use PHPUnit\Framework\TestCase;
-use KontaktDev\Source;
+use Kontakt\RequestStatusVerifier\Source;
 
 class SourceTest extends TestCase {
 

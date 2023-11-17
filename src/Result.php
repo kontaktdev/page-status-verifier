@@ -1,14 +1,17 @@
 <?php
-namespace KontaktDev;
+namespace Kontakt\RequestStatusVerifier;
 
 /**
  * Class Result
- * @package KontaktDev
+ * @package Kontakt\RequestStatusVerifier
  */
 class Result {
-    private $available;
-    private $unavailable;
+    private array $available;
+    private array $unavailable;
 
+    /**
+     * Result constructor.
+     */
     public function __construct() {
         $this->available = [];
         $this->unavailable = [];
@@ -17,28 +20,28 @@ class Result {
     /**
      * @param $url
      */
-    public function addAvailable($url) {
+    public function addAvailable($url): void {
         $this->available[] = $url;
     }
 
     /**
      * @param $url
      */
-    public function addUnavailable($url) {
+    public function addUnavailable($url): void {
         $this->unavailable[] = $url;
     }
 
     /**
      * @return array
      */
-    public function getAvailable() {
+    public function getAvailable(): array {
         return $this->available;
     }
 
     /**
      * @return array
      */
-    public function getUnavailable() {
+    public function getUnavailable(): array {
         return $this->unavailable;
     }
 }
