@@ -1,6 +1,6 @@
 # Request Status Verifier
 
-Request Status Verifier is a PHP utility that allows you to check the availability of websites using various HTTP methods (GET, POST, HEAD) with custom timeouts. It provides a flexible and structured way to monitor your websites or URLs.
+Request Status Verifier is a PHP utility that allows you to check the availability of web end-points, resources and websites, using various HTTP methods (GET, POST & HEAD) with custom timeouts. It provides a flexible and structured way to monitor your websites or URLs.
 
 ## Table of Contents
 - [Installation](#installation)

@@ -1,7 +1,7 @@
 {
   "name": "kontakt/request-status-verifier",
   "description": "URL status checker component for PHP.",
-  "type": "library",
+  "type": "project",
   "license": "MIT",
   "authors": [
     {
